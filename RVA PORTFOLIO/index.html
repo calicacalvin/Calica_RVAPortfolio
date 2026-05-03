@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CALICA CALVIN | Art & IT Portfolio</title>
+
+    <style>
+
+        :root {
+
+            --bg: #050608;
+
+            --card-bg: #0d0f14;
+
+            --accent: #00f2ff;
+
+            --text: #ffffff;
+
+            --text-dim: #9ca3af;
+
+            --border: rgba(255, 255, 255, 0.08);
+
+        }
+
+
+
+        body {
+
+            background-color: var(--bg);
+
+            color: var(--text);
+
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+            margin: 0;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        /* Fixed Navigation */
+
+        .toc {
+
+            position: fixed;
+
+            left: 30px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            z-index: 100;
+
+            border-left: 1px solid var(--border);
+
+            padding-left: 20px;
+
+        }
+
+
+
+        .toc a {
+
+            display: block;
+
+            color: var(--text-dim);
+
+            text-decoration: none;
+
+            font-size: 0.65rem;
+
+            font-weight: 700;
+
+            margin: 8px 0;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+
+        }
+
+
+
+        .toc a:hover { color: var(--accent); padding-left: 5px; }
+
+
+
+        .container {
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 100px 20px;
+
+        }
+
+
+
+        header { margin-bottom: 120px; text-align: left; }
+
+        header h1 { font-size: 4rem; letter-spacing: -3px; margin: 0; line-height: 0.9; }
+
+        .tag { color: var(--accent); font-size: 0.75rem; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+
+
+
+        /* Module Sections */
+
+        section { margin-bottom: 180px; }
+
+
+
+        .module-wrapper {
+
+            display: flex;
+
+            gap: 50px;
+
+            align-items: center;
+
+            padding: 20px;
+
+            cursor: pointer;
+
+        }
+
+
+
+        section:nth-child(even) .module-wrapper { flex-direction: row-reverse; }
+
+
+
+        .module-image {
+
+            flex: 1.2;
+
+            height: 450px;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+
+        }
+
+
+
+        .module-wrapper:hover .module-image {
+
+            border-color: var(--accent);
+
+            transform: scale(1.02);
+
+            box-shadow: 0 20px 40px rgba(0, 242, 255, 0.1);
+
+        }
+
+
+
+        .module-image img { width: 100%; height: 100%; object-fit: cover; }
+
+
+
+        .module-text { flex: 0.8; }
+
+        .module-text h2 { font-size: 1.8rem; margin: 10px 0; letter-spacing: -0.5px; }
+
+        .module-text p { color: var(--text-dim); line-height: 1.7; font-size: 1rem; }
+
+        .about-work { margin-top: 15px; border-top: 1px solid var(--border); padding-top: 15px; color: var(--text); font-size: 0.95rem; }
+
+
+
+        /* Statement Box */
+
+        .statement-box {
+
+            background: var(--card-bg);
+
+            padding: 60px;
+
+            border-radius: 40px;
+
+            margin-bottom: 180px;
+
+            border: 1px solid var(--border);
+
+        }
+
+
+
+        /* Modal */
+
+        .modal {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0; left: 0;
+
+            width: 100%; height: 100%;
+
+            background: rgba(0,0,0,0.98);
+
+            z-index: 1000;
+
+            justify-content: center;
+
+            align-items: center;
+
+            backdrop-filter: blur(20px);
+
+        }
+
+        .modal-content { max-width: 90%; max-height: 85vh; text-align: center; }
+
+        .modal img { max-width: 100%; max-height: 70vh; border-radius: 12px; border: 1px solid var(--accent); }
+
+        .modal h2 { margin-top: 20px; color: var(--accent); }
+
+        .close { position: absolute; top: 40px; right: 50px; font-size: 50px; cursor: pointer; }
+
+
+
+        @media (max-width: 900px) {
+
+            .module-wrapper, section:nth-child(even) .module-wrapper { flex-direction: column; text-align: center; }
+
+            .toc { display: none; }
+
+            .module-image { width: 100%; height: 350px; }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<nav class="toc">
+
+    <a href="#about">Statement</a>
+
+    <a href="#m1">Mod 01</a><a href="#m2">Mod 02</a><a href="#m3">Mod 03</a>
+
+    <a href="#m4">Mod 04</a><a href="#m5">Mod 05</a><a href="#m6">Mod 06</a>
+
+    <a href="#m8">Mod 08</a><a href="#m9">Mod 09</a><a href="#m10">Mod 10</a>
+
+    <a href="#m11">Mod 11</a>
+
+</nav>
+
+
+
+<div class="container">
+
+    <header>
+
+        <span class="tag">BSIT 2B | RVA Portfolio</span>
+
+        <h1>CALICA CALVIN</h1>
+
+        <p>calvinkurt0712@gmail.com</p>
+
+    </header>
+
+
+
+    <div class="statement-box" id="about">
+
+        <span class="tag">Artist Statement</span>
+
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+
+            This portfolio is a real look at my journey as an IT student exploring the world of visual arts. It’s not just about making things look "cool"—it’s about learning how to communicate ideas clearly, whether through a hand-drawn sketch or a digital poster. From the frustration of getting proportions right in Module 2 to the satisfaction of designing a clean infographic in Module 10, these works represent my effort to bridge the gap between creative expression and technical function.
+
+        </p>
+
+    </div>
+
+
+
+    <section id="m1">
+
+        <div class="module-wrapper" onclick="openFull('mod1.jpg', 'Digital Visual World Collage', 'I wanted to show how different digital parts come together to form our modern view of the world.')">
+
+            <div class="module-image"><img src="mod1.jpg" alt="M1"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 01</span>
+
+                <h2>Visual World</h2>
+
+                <p>An exploration of our digital landscape using collage.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I used icons and code snippets to visualize how deeply technology is integrated into our daily lives.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m2">
+
+        <div class="module-wrapper" onclick="openFull('mod2.jpg', 'Observational Drawing', 'This was about training my eyes to see details in real life and capturing them with just a pencil.')">
+
+            <div class="module-image"><img src="mod2.jpg" alt="M2"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 02</span>
+
+                <h2>7 Elements of Art</h2>
+
+                <p>Mastering the basics through traditional sketching.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I focused on line and value to turn a flat piece of paper into a three-dimensional object.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m3">
+
+        <div class="module-wrapper" onclick="openFull('mod3.jpg', 'Abstract Composition', 'I focused on creating a balanced feel using shapes and lines rather than drawing things we recognize.')">
+
+            <div class="module-image"><img src="mod3.jpg" alt="M3"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 03</span>
+
+                <h2>Abstract Design</h2>
+
+                <p>Practicing design principles through abstract shapes.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I played with color and movement to see how shapes can lead the eye across the page.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m4">
+
+        <div class="module-wrapper" onclick="openFull('mod4.jpg', 'Transformation Series', 'This series shows the process of change, documenting how a simple form can turn into something totally new.')">
+
+            <div class="module-image"><img src="mod4.jpg" alt="M4"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 04</span>
+
+                <h2>Transformation</h2>
+
+                <p>A sequence showing an object evolving step-by-step.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I explored how one form can morph into another, showing that art is a process of constant change.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m5">
+
+        <div class="module-wrapper" onclick="openFull('mod5.jpg', 'Pattern Design', 'I looked for natural patterns and stories in my surroundings to create a visual narrative.')">
+
+            <div class="module-image"><img src="mod5.jpg" alt="M5"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 05</span>
+
+                <h2>Filipino-Inspired Pattern</h2>
+
+                <p>Using photography and cultural symbols to create designs.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I integrated Baybayin and traditional motifs to showcase my heritage through design.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m6">
+
+        <div class="module-wrapper" onclick="openFull('mod6.jpg', 'Drawing & Painting', 'I practiced how light hits surfaces and how colors blend to make a piece feel more alive.')">
+
+            <div class="module-image"><img src="mod6.jpg" alt="M6/7"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 06-07</span>
+
+                <h2>Drawing/Painting</h2>
+
+                <p>A deeper look at light, shadow, and color theory.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I focused on the "realness" of an object, working on how shadows give things weight.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m8">
+
+        <div class="module-wrapper" onclick="openFull('mod8.png', 'IT Digital Poster', 'My goal was to make technical information look exciting and modern using sharp graphics.')">
+
+            <div class="module-image"><img src="mod8.png" alt="M8"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 08</span>
+
+                <h2>Digital Poster</h2>
+
+                <p>Mixing IT cybersecurity themes with an esports vibe.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I used glowing "neon" effects to make a serious topic like data protection feel engaging.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m9">
+
+        <div class="module-wrapper" onclick="openFull('mod9.jpg', 'Photo Narrative Series', 'I explored how photography art meet by creating designs that repeat perfectly across a surface.')">
+
+            <div class="module-image"><img src="mod9.jpg" alt="M9"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 09</span>
+
+                <h2>Photo Narrative</h2>
+
+                <p>Telling a story through a series of captured moments.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I used photography to capture three specific moments that tell a single, connected story.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m10">
+
+        <div class="module-wrapper" onclick="openFull('mod10.jpg', 'IT Infographic', 'I focused on layout and icons to make sure the information was clear and quick to understand.')">
+
+            <div class="module-image"><img src="mod10.jpg" alt="M10"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 10</span>
+
+                <h2>Infographic</h2>
+
+                <p>Simplifying how the internet works through visual data.</p>
+
+                <div class="about-work"><strong>About this work:</strong> This was a challenge in balancing text and graphics so that anyone can understand technical steps.</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="m11">
+
+        <div class="module-wrapper" onclick="openFull('mod11.png', 'Meme Series Creation', 'I created memes that reflect all students experiences')">
+
+            <div class="module-image"><img src="mod11.png" alt="M11"></div>
+
+            <div class="module-text">
+
+                <span class="tag">Module 11</span>
+
+                <h2>Meme Series</h2>
+
+                <p>Exploring humor as a tool for digital communication.</p>
+
+                <div class="about-work"><strong>About this work:</strong> I used memes to talk about the reality of student life and the struggle for a "Summer Break."</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+</div>
+
+
+
+<div id="modal" class="modal" onclick="this.style.display='none'">
+
+    <span class="close">&times;</span>
+
+    <div class="modal-content" onclick="event.stopPropagation()">
+
+        <img id="m-img" src="">
+
+        <h2 id="m-title"></h2>
+
+        <p id="m-desc" style="color:#888; max-width:600px; margin: 15px auto;"></p>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+    function openFull(src, title, desc) {
+
+        document.getElementById('m-img').src = src;
+
+        document.getElementById('m-title').innerText = title;
+
+        document.getElementById('m-desc').innerText = desc;
+
+        document.getElementById('modal').style.display = 'flex';
+
+    }
+
+</script>
+
+
+
+</body>
+
+</html>
